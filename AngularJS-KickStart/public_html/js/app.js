@@ -30,7 +30,15 @@
      * a module as a container for the different parts app 
      * controllers, services, filters, directives, etc.
      */
-    var app = angular.module('ksApp',[
+    var app = angular.module('ksApp',['ngRoute'
     ]);
+    
+    app.config(function ($routeProvider){
+        $routeProvider
+                .when('/',{
+                    templateUrl: 'view/helloAngular.html',
+                    controller: 'helloAngular'
+                })
+    });
     
 })();
